@@ -2,7 +2,7 @@ import sqlite3
 from flask import Flask, render_template
 from flask_httpauth import HTTPBasicAuth
 import json
-from .flask_sqlite_admin_lcl.core import sqliteAdminBlueprint
+from flask_sqlite_admin_lcl.core import sqliteAdminBlueprint
 import random
 chars = '0123456789ABCDEF'
 
@@ -104,4 +104,4 @@ def latest():
 
 app.jinja_env.auto_reload = True
 app.config['TEMPLATES_AUTO_RELOAD'] = True
-app.run(host='0.0.0.0')
+app.run(host='0.0.0.0', port=8809)
